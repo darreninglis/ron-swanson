@@ -29,6 +29,18 @@ h2 {
 .playButton {
 	width: 6vw;
 	cursor: pointer;
+	position: relative;
+	display: inline-block;
+}
+
+.playButton:hover {
+	-webkit-filter: brightness(0.9);
+	filter: brightness(0.9);
+}
+
+.playButton:active {
+	-webkit-filter: brightness(0.7);
+	filter: brightness(0.7);
 }
 
 @keyframes App-logo-spin {
