@@ -12,11 +12,15 @@ import joke from '../sounds/tax_joke.mp3';
 // TODO:
 // > add more sounds
 // > disable mobile limit in SoundManagerConfig (see docs in chrome bookmarks bar)
+// > check if nextSound is equal to currentSound and redraw if it is
+// > mute button
 
 // > Optional: display sound effect title in <p></p> below button
-// > Optional: Animate swanson image while playing / change color
+// > Optional: Animate swanson image while playing / change color - shake moustache?
 // > Optional: optimise sound file sizes
 // > Optional: show progress bar for sound length
+// > Optional: take audio clips off site and call them with axios firebase?
+
 
 class Ron extends React.Component {
 	sounds = [giggle, joke];
