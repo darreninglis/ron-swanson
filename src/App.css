@@ -55,6 +55,11 @@ h2 {
 @media only screen and (max-width: 600px) {
 	.ron-head {
 		height: 80vmin;
+		position: absolute;
+		top: 1em;
+	}
+	h2 {
+		margin-top: 250px;
 	}
 	.playButton {
 		width: 40%;

@@ -10,11 +10,9 @@ import giggle from '../sounds/ron_swanson_giggle.mp3';
 import joke from '../sounds/tax_joke.mp3';
 
 // TODO:
-// > add more sounds
-// > disable mobile limit in SoundManagerConfig (see docs in chrome bookmarks bar)
-// > check if nextSound is equal to currentSound and redraw if it is
 // > mute button
 // > wiggle play button to get attention
+// > add more sounds -> check if mobileLimit is affecting phone on cell network
 
 // > Optional: display sound effect title in <p></p> below button
 // > Optional: Animate swanson image while playing / change color - shake moustache?
@@ -23,26 +21,40 @@ import joke from '../sounds/tax_joke.mp3';
 // > Optional: take audio clips off site and call them with axios firebase?
 // > Optional: disable play button while playing
 
+// TODO:
+// hard coded for giggle, random sound returns the path not the 'giggle' from sound array
 class Ron extends React.Component {
-	sounds = [giggle, joke];
-
+	sounds = [joke, giggle];
 	state = {
-		status: 'STOPPED'
+		status: 'STOPPED',
+		randomSound: '',
+		lastRandomSound: ''
 	};
 
 	handleClick = (e) => {
-		this.setState({ status: 'PLAYING' });
-		console.log(this.getRandomSoundEffect());
+		this.getRandomSoundEffect();
 	};
 
 	getRandomSoundEffect = () => {
 		let randomSound = this.sounds[
 			Math.floor(Math.random() * this.sounds.length)
 		];
-		return randomSound;
+
+		if (randomSound === this.state.lastRandomSound) {
+			// randomSong
+			this.getRandomSoundEffect();
+		} else {
+			this.setState({
+				randomSound: randomSound,
+				lastRandomSound: randomSound,
+				status: 'PLAYING'
+			});
+		}
 	};
 
 	render() {
+		const { status, randomSound } = this.state;
+
 		return (
 			<div className='ron-header'>
 				<img src={ron} className='ron-head' alt='ron' />
@@ -54,8 +66,9 @@ class Ron extends React.Component {
 					onClick={this.handleClick}
 				/>
 				<SoundComponent
-					status={this.state.status}
-					soundEffect={this.getRandomSoundEffect()}
+					status={status}
+					// soundEffect={this.state.randomSound}
+					soundEffect={randomSound}
 				/>
 			</div>
 		);
