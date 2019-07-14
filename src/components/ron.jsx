@@ -4,13 +4,13 @@ import SoundComponent from './Sound';
 // images
 import ron from '../images/ron.png';
 import playButton from '../images/button.png';
+import steak from '../images/steak.svg';
 
 // sounds
 import giggle from '../sounds/ron_swanson_giggle.mp3';
 import joke from '../sounds/tax_joke.mp3';
 
 // TODO:
-// > mute button
 // > wiggle play button to get attention
 // > add more sounds -> check if mobileLimit is affecting phone on cell network
 
@@ -20,6 +20,7 @@ import joke from '../sounds/tax_joke.mp3';
 // > Optional: show progress bar for sound length
 // > Optional: take audio clips off site and call them with axios firebase?
 // > Optional: disable play button while playing
+// > Optoinal: mute button
 
 // TODO:
 // hard coded for giggle, random sound returns the path not the 'giggle' from sound array
@@ -65,11 +66,18 @@ class Ron extends React.Component {
 					alt='play button'
 					onClick={this.handleClick}
 				/>
+
 				<SoundComponent
 					status={status}
-					// soundEffect={this.state.randomSound}
 					soundEffect={randomSound}
 				/>
+				<footer>
+					Made with <img src={steak} className='steak' alt='steak' />{' '}
+					by{' '}
+					<a href='darreninglis.com' target='_blank'>
+						Darren Inglis
+					</a>
+				</footer>
 			</div>
 		);
 	}
