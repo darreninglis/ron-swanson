@@ -14,7 +14,6 @@ import joke from '../sounds/tax_joke.mp3';
 // > wiggle play button to get attention
 // > add more sounds -> check if mobileLimit is affecting phone on cell network
 
-// > Optional: display sound effect title in <p></p> below button
 // > Optional: Animate swanson image while playing / change color - shake moustache?
 // > Optional: optimise sound file sizes
 // > Optional: show progress bar for sound length
