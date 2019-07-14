@@ -51,6 +51,10 @@ footer {
 	justify-self: flex-end;
 }
 
+footer a {
+	color: wheat;
+}
+
 .steak {
 	width: 1em;
 }

@@ -23,7 +23,7 @@ import joke from '../sounds/tax_joke.mp3';
 // > Optoinal: mute button
 
 // TODO:
-// hard coded for giggle, random sound returns the path not the 'giggle' from sound array
+
 class Ron extends React.Component {
 	sounds = [joke, giggle];
 	state = {
@@ -67,13 +67,10 @@ class Ron extends React.Component {
 					onClick={this.handleClick}
 				/>
 
-				<SoundComponent
-					status={status}
-					soundEffect={randomSound}
-				/>
+				<SoundComponent status={status} soundEffect={randomSound} />
 				<footer>
 					Made with <img src={steak} className='steak' alt='steak' />{' '}
-					by{' '}
+					by <br />
 					<a href='darreninglis.com' target='_blank'>
 						Darren Inglis
 					</a>
