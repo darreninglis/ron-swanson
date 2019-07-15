@@ -118,7 +118,7 @@ class Ron extends React.Component {
 				<footer>
 					Made with <img src={steak} className='steak' alt='steak' />{' '}
 					by <br />
-					<a href='darreninglis.com' target='_blank'>
+					<a href='https://www.darreninglis.com' target='_blank'>
 						Darren Inglis
 					</a>
 				</footer>
