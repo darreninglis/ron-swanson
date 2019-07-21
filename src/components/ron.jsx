@@ -17,7 +17,6 @@ import cake from '../sounds/cake.mp3';
 import chummy from '../sounds/chummy.mp3';
 import currency from '../sounds/currency.mp3';
 import dentist from '../sounds/dentist.mp3';
-import fish from '../sounds/fish.mp3';
 import fishing_yoga from '../sounds/fishing_yoga.mp3';
 import frozen_yoghurt from '../sounds/frozen_yoghurt.mp3';
 import hangover from '../sounds/hangover.mp3';
@@ -36,7 +35,6 @@ class Ron extends React.Component {
 	sounds = [
 		veganisim,
 		frozen_yoghurt,
-		fish,
 		talk_back,
 		dentist,
 		beaurocrat,
