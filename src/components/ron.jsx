@@ -33,14 +33,13 @@ import veganisim from '../sounds/veganisim.mp3';
 
 class Ron extends React.Component {
 	sounds = [
-		veganisim,
+		bacon_and_eggs,
 		frozen_yoghurt,
 		talk_back,
 		dentist,
 		beaurocrat,
 		fishing_yoga,
 		party_platter,
-		bacon_and_eggs,
 		at_doctor,
 		currency,
 		born_ready,
